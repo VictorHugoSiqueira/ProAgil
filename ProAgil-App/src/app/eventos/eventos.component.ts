@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Evento } from '../_models/Evento';
 import { EventoService } from '../_services/evento.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-eventos',
@@ -20,11 +21,13 @@ export class EventosComponent implements OnInit {
   registerForm!: FormGroup;
   bodyDeletarEvento = '';
   _filtroLista = '';
-  
+  title = 'Eventos';
+
   constructor(
     private eventoService: EventoService
     ,private modalService: BsModalService
     ,private fb: FormBuilder  
+    ,private toastr: ToastrService
     ) { }
 
   get filtroLista(): string {
@@ -68,8 +71,10 @@ export class EventosComponent implements OnInit {
         (novoEvento : any) => {
         template.hide();
         this.getEventos();
+        this.toastr.success('Inserido com Sucesso!');
+
       }, error => {
-        console.log(error);
+        this.toastr.error(`Erro ao Inserir: ${error}`);
             }
       );
       } else {
@@ -78,8 +83,10 @@ export class EventosComponent implements OnInit {
         () => {
         template.hide();
         this.getEventos();
+        this.toastr.success('Editado com Sucesso!');
+
       }, error => {
-        console.log(error);
+        this.toastr.error(`Erro ao Editar: ${error}`);
             }
       );
 
@@ -93,9 +100,8 @@ export class EventosComponent implements OnInit {
       (_eventos: Evento[]) => {
       this.eventos = _eventos;
       this.eventosFiltrados = this.eventos;
-      console.log(this.eventos);
     }, error => {
-      console.log(error);
+      this.toastr.error(`Erro ao tentar carregar Eventos: ${error}`);
     });
   }
 
@@ -123,8 +129,9 @@ export class EventosComponent implements OnInit {
       () => {
         template.hide();
         this.getEventos();
+        this.toastr.success('Deletado com Sucesso!');
       }, error => {
-        console.log(error);
+        this.toastr.error('Erro ao tentar Deletar');
       }
     );
   }
