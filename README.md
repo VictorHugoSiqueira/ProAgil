@@ -1,6 +1,5 @@
 ## ProAgil Eventos
 
-
 https://github.com/VictorHugoSiqueira/ProAgil
 
 # Sobre o projeto
@@ -17,46 +16,48 @@ Dentro da tabela através de botões podemos editar,excluir e adcionar eventos.
 ## Layout web para cadastro de Usuários
 ![Web 2](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/Screenshot_2.png)
 
-## layout Web para visualização de Eventosdd
+## layout Web para visualização de Eventos
 ![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/proagileventos.png)
 
-## layout Web Products
-![Web 3]()
+## layout Web input de filtro funcionando com two way data binding
+![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/filtro.png)
 
-## layout Web Products
-![Web 3]()
+## layout Web modal de confirmação de exclusão de Evento
+![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/modaldeletandoevento.png)
+
+## layout Web modal de cadastro de Evento
+![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/modalcadastroevento.png)
+
+## layout Web NgxToastr para mostrar erro ao editar Evento
+![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/erroaodeletar.png)
+
+## layout Web NgxToastr para mostrar sucesso ao editar Evento
+![Web 3](https://github.com/VictorHugoSiqueira/ProAgil/blob/master/ProAgil-App/src/assets/images/deletadocomsucesso.png)
 
 # Tecnologias Utilizadas
 ## Backend
-- JavaScript
-- JSON Server
+- C#
+- .NetCore
+- Entity Framework Core
 ## Front end
 - HTML / CSS / JS / TypeScript
-- ReactJS (framework)
-## Extra
-- Localstorage
+- Angular
 
 # Executando o projeto
 ## Clonando o repositório
-git clone https://github.com/VictorHugoSiqueira/CrudDesafio2GamaAcademy
+git clone https://github.com/VictorHugoSiqueira/ProAgil
 
-## Iniciando o back dos clientes 
-<dt>1 - cd backend/clients</dt>
-<dt>2 - npm install</dt>
-<dt>3 - npm start</dt>
-
-## Iniciando o back dos Produtos 
-<dt>1 - cd backend/products</dt>
-<dt>2 - npm install</dt>
-<dt>3 - npm start</dt>
+## Iniciando o back dos Eventos 
+<dt>1 - cd ProAgil.API</dt>
+<dt>2 - dotnet watch run</dt>
 
 ## Iniciando a aplicação Web
-<dt>1 - cd frontend</dt>
+<dt>1 - cd ProAgil-App</dt>
 <dt>2 - npm install</dt>
-<dt>3 - npm start</dt>
+<dt>3 - ng serve</dt>
 
 # Autor
 
 Victor Hugo Fernandes Siqueira
 
-https://www.linkedin.com/in/victor-hugo-fernandes-siqueira-b22a10154/
+https://www.linkedin.com/in/victorsiqueira/
